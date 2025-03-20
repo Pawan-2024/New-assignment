@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+    <style>
+        body{
+        background-color: rgb(237, 157, 157);
+       
+        
+       }
+       @media screen and (orientation:portrait) {
+        .mobile{
+            flex-wrap: wrap;
+            
+            
+
+        }
+        .flip-card{
+          margin-bottom: 10%;
+        }
+      }
+      @media screen and (orientation:landscape) {
+        .mobile{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+              
+        }
+
+        .flip-card-front{
+          width: 100px;
+          height: 250px;
+        }
+       
+      }
+      
+        .flip-card {
+          width: 300px;
+          height: 350px;
+           perspective: 1000px; 
+        }
+        .mobile{
+          margin-top: 3rem;
+        }
+      
+        .flip-card-inner {
+          width: 100%;
+          height: 100%;
+            position: relative; 
+          transform-style: preserve-3d; 
+          transition: transform 0.6s;
+        }
+      
+        .flip-card:hover .flip-card-inner {
+          transform: rotateY(180deg);
+        }
+      
+        .flip-card-front,
+        .flip-card-back {
+          position: absolute; 
+          width: 100%;
+          height: 100%;
+           backface-visibility: hidden; 
+           display: flex; 
+          justify-content: center;
+          align-items: center;
+        }
+      
+        .flip-card-front {
+          background-color: ghostwhite;
+        }
+      
+        .flip-card-front img {
+          width: 100%;
+          height: 100%;
+        }
+      
+        .flip-card-back {
+          background-color: #1f0101;
+          color: #fff;
+           transform: rotateY(180deg); 
+          text-align: center;
+          font-size: 20px;
+          font-weight: bold;
+           cursor: pointer; 
+        }
+        
+      </style>
+      <body class="container-fluid">
+        <h1 class="bg-black text-white text-center">Welcome to Bookshowcase</h1>
+    <p class="bg-dark text-white text-end p-2"><a href="">Home</a></p>
+    <h3>Explore Books</h3>
+      
+      <div class="mobile m-3">
+        <!-- flipping First Book -->
+        <div class="flip-card" data-bs-toggle="modal" data-bs-target="#tech">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="public/images/tech.png" alt="Tech Book">
+            </div>
+            <div class="flip-card-back">
+              <p>Check for Details</p>
+            </div>
+          </div>
+        </div>
+      
+        <!--flipping  Second Book -->
+        <div class="flip-card" data-bs-toggle="modal" data-bs-target="#invention">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="public/images/invention.png" alt="Invention Book">
+            </div>
+            <div class="flip-card-back">
+              <p>Check for Details</p>
+            </div>
+          </div>
+        </div>
+      
+        <!--  flipping Third Book -->
+        <div class="flip-card" data-bs-toggle="modal" data-bs-target="#mindfulness">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="public/images/mindfulness.png" alt="Mindfulness Book">
+            </div>
+            <div class="flip-card-back">
+              <p>Check for Details</p>
+            </div>
+          </div>
+        </div>
+      </div>
+            <!-- first book -->
+      <div class="modal bg-primary-subtle" id="tech" data-bs-dismiss="#Home" > 
+        <h1 class="bg-black text-white text-center"> Book showcase : Book 1 Details</h1>
+    <p class="bg-dark text-white text-lg-end p-2"><a href="">Home</a></p>
+        <div class="modal-dialog">
+            <div class="modal-content "> 
+                 <div class="modal-header">
+                  <div>
+                    <h4>Book-1 Exploring Technology</h4>
+                    <img src="public/images/tech.png"  >
+
+                  </div> 
+                </div>
+                <div class="modal-body">
+                   <details>
+                    
+                    <summary>Genre</summary>
+                        
+                        <ul>
+                            <li>
+                                technology
+                            </li>
+                            <li>
+                                education
+                            </li>
+                        </ul>
+                    
+                   </details>
+                   <details>
+                    
+                    <summary>Index Page</summary>
+                        <ul>
+                            <li>
+                                Introduction
+                            </li>
+                            <li>
+                                Chapter1: Overview
+                            </li>
+                            <li>
+                                Chapter2:Advanced concepts
+                            </li>
+                        </ul>
+                    
+                   </details>
+                   <details>
+                    <summary>Authors</summary>
+                    <p>Jane Doe,John Smith</p>
+                   </details>
+                   <details>
+                    <summary>Overview</summary>
+                        <p>This book provides detailed insights into technology and communication skills for professionals and students</p>
+                   </details>
+                   <details>
+                    <summary>Competitive Exam Relevance</summary>
+                   </details>
+                   <details>
+                    <summary>Purchase links</summary>
+                    <ul>
+                    <li><a href="">amazon</a></li>
+                    <li><a href="">flipkart</a></li>
+                    </ul>
+                   </details>
+                   </div>
+                   <h4 class="mb-3 m-3">Feedback form</h4>
+                
+                   <div class="bg-dark-subtle w-50 p-3 mb-4" style="margin-left : 25%">
+                    
+                     <h6>Name:</h6>
+                     <input type="text" name="" id="" class="form-control">
+                     
+                     
+                     <h6>Feedback:</h6>
+                     
+                     <textarea name="" id="" class="w-100"></textarea>
+                     <button type="submit" class="btn btn-primary mt-2 w-100">submit</button>
+                    </div>
+        
+            </div>
+           
+        </div>
+        <p class="bg-black w-100 mt-4 text-center text-white p-2 ">@ 2025 Book Showcase|All rights reserved</p>
+    </div>
+    <!-- 2nd Book -->
+    <div class="modal bg-primary-subtle" id="invention" data-bs-dismiss="#Home"> 
+        <h1 class="bg-black text-white text-center"> Book showcase : Book 2 Details</h1>
+    <p class="bg-dark text-white text-lg-end p-2"><a href="">Home</a></p>
+        <div class="modal-dialog">
+            <div class="modal-content "> 
+                 <div class="modal-header">
+                  <div>
+                    <h4>Book-2 Exploring Innovation</h4>
+                    <img src="public/images/invention.png"  >
+
+                  </div> 
+                </div>
+                <div class="modal-body">
+                   <details>
+                    
+                    <summary>Genre</summary>
+                        
+                        <ul>
+                            <li>
+                                innovation
+                            </li>
+                            <li>
+                                education
+                            </li>
+                        </ul>
+                    
+                   </details>
+                   <details>
+                    
+                    <summary>Index Page</summary>
+                        <ul>
+                            <li>
+                                Introduction
+                            </li>
+                            <li>
+                                Chapter1: Overview
+                            </li>
+                            <li>
+                                Chapter2:Advanced concepts
+                            </li>
+                        </ul>
+                    
+                   </details>
+                   <details>
+                    <summary>Authors</summary>
+                    <p>John brook,John Smith</p>
+                   </details>
+                   <details>
+                    <summary>Overview</summary>
+                        <p>This book provides detailed insights into innovation and invention skills for professionals and students</p>
+                   </details>
+                   <details>
+                    <summary>Competitive Exam Relevance</summary>
+                   </details>
+                   <details>
+                    <summary>Purchase links</summary>
+                    <ul>
+                    <li><a href="">amazon</a></li>
+                    <li><a href="">flipkart</a></li>
+                    </ul>
+                   </details>
+                   </div>
+                   <h4 class="mb-3 m-3">Feedback form</h4>
+                
+                   <div class="bg-dark-subtle w-50 p-3 mb-4" style="margin-left : 25%">
+                    
+                     <h6>Name:</h6>
+                     <input type="text" name="" id="" class="form-control">
+                     
+                     
+                     <h6>Feedback:</h6>
+                     
+                     <textarea name="" id="" class="w-100"></textarea>
+                     <button type="submit" class="btn btn-primary mt-2 w-100">submit</button>
+                    </div>
+            
+                
+            </div>
+        </div>
+        <p class="bg-black w-100 mt-4 text-center text-white p-2 ">@ 2025 Book Showcase|All rights reserved</p>  
+    </div>
+          <!-- 3rd book -->
+          <div class="modal bg-primary-subtle" id="mindfulness" data-bs-dismiss="#Home"> 
+            <h1 class="bg-black text-white text-center"> Book showcase : Book 3 Details</h1>
+    <p class="bg-dark text-white text-lg-end p-2"><a href="">Home</a></p>
+            <div class="modal-dialog">
+                <div class="modal-content "> 
+                     <div class="modal-header">
+                      <div>
+                        <h4>Book-1 Exploring psychology of mind</h4>
+                        <img src="public/images/mindfulness.png"  >
+    
+                      </div> 
+                    </div>
+                    <div class="modal-body">
+                       <details>
+                        
+                        <summary>Genre</summary>
+                            
+                            <ul>
+                                <li>
+                                    psychology
+                                </li>
+                                <li>
+                                    education
+                                </li>
+                            </ul>
+                        
+                       </details>
+                       <details>
+                        
+                        <summary>Index Page</summary>
+                            <ul>
+                                <li>
+                                    Introduction
+                                </li>
+                                <li>
+                                    Chapter1: Overview
+                                </li>
+                                <li>
+                                    Chapter2:Advanced concepts
+                                </li>
+                            </ul>
+                        
+                       </details>
+                       <details>
+                        <summary>Authors</summary>
+                        <p>harry smith,John bilton</p>
+                       </details>
+                       <details>
+                        <summary>Overview</summary>
+                            <p>This book provides detailed insights into psychology of mindset for professionals and students</p>
+                       </details>
+                       <details>
+                        <summary>Competitive Exam Relevance</summary>
+                       </details>
+                       <details>
+                        <summary>Purchase links</summary>
+                        <ul>
+                        <li><a href="">amazon</a></li>
+                        <li><a href="">flipkart</a></li>
+                        </ul>
+                       </details>
+                       </div>
+                       <h4 class="mb-3 m-3">Feedback form</h4>
+                
+                   <div class="bg-dark-subtle w-50 p-3 mb-4" style="margin-left : 25%">
+                    
+                     <h6>Name:</h6>
+                     <input type="text" name="" id="" class="form-control">
+                     
+                     
+                     <h6>Feedback:</h6>
+                     
+                     <textarea name="" id="" class="w-100"></textarea>
+                     <button type="submit" class="btn btn-primary mt-2 w-100">submit</button>
+                    </div>
+                    
+                </div>
+                
+            </div>
+            <p class="bg-black w-100 mt-4 text-center text-white p-2 ">@ 2025 Book Showcase|All rights reserved</p>
+        </div>
+
+        <footer class="bg-black w-100 mt-4 text-center text-white p-2 "> @ 2025 Book Showcase|All rights reserved</footer>
+    
+    
+   <!-- functuionality code for jquery -->
+   <script src="../node_modules/jquery/dist/jquery.js"></script>
+   <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+  
+</body>
+</html>
